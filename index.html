@@ -1,86 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Iqbal Maulana</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HBD love</title>	    
+    <link type="text/css" rel="stylesheet" href="./file/default.css">
+    <script type="text/javascript" src="./file/jquery.min.js"></script>
+    <script type="text/javascript" src="./file/jscex.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-parser.js"></script>
+    <script type="text/javascript" src="./file/jscex-jit.js"></script>
+    <script type="text/javascript" src="./file/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./file/love.js" charset="utf-8"></script>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+    </script>
 </head>
 <body>
-
-<!--loader-->
-<div class="bg-loader">
-    <div class="loader"></div>
-</div>
-
-    <!--header-->
-    <div class="medsos">
-        <div class="container">
-            <ul>
-                <li><a href="#">f</a></li>
-                <li><a href="#">y</a></li>
-                <li><a href="#">t</a></li>
-            </ul>
+    <div id="main">
+        <div id="error"><a href="https://images.app.goo.gl/1ZgjQG3kEFpwwCDb9">Chrome</a> (<a href="http://firefox.com.cn/download/">Firefox</a>)</div>
+        <audio autoplay="autoplay" height="100" width="100" id="myAudio">
+            <source src="biru.mp3" type="audio/mp3" />
+            <embed height="100" width="100" />
+        </audio>
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <span class="say">happy level up day!!! make a wish for u b'day, tahun ini umur kamu bertambah satu tahun dan jatah hidup kamu berkurang satu tahun juga semoga kamu sehat, kmu skrg makin dewasa, apapun yang kamu inginkan bisa terjadi. terimakasih udh sekuat ini dan bertahan hidup, banyak hal yang sudah kmu laluin dan masih bnyk hal yng blm km laluin, semakin kami dewasa semkin bnyk juga rintangannya but its okayy karna masih bnyk orang yg sayang sma kmu, apapun susahnya apapun sedihnya apapun senangnya kamu nikmatin dn brsyukur. semoga banyak kebahagiaan yang kembali dari hari ini
+                        semoga semua harapan yg diinginkan menjadi kenyataan
+                        semoga akan ada banyak kebahagiaan yang datang ke dalam hidupmu semoga harimu jauh lebih menyenangkan sesuai dng harapan mu.
+                        sekali lagi selamat ulang tahun ya, terimakasih sudah menjadi kuat selama ini walaupun awalnya dikuat2in aj dan slnjutnya harus slalu kuat, ceria dan bahagia yaa!! 🌷✨
+                        semoga dengan bertambahnya usiamu, semakin sempurna juga imanmu, rajin ibadahnya, selalu diberi kesehatan sama yang mahakuasa, panjang umur, selalu bahagia, berbakti terus sama orangtua, serta segala doa dan cita cita yang kamu inginkan bisa terwujud dan dimudahkan dalam segala urusan. Aamiin
+                        yeyeyy sekarang kamuu ulang tahun sayangg, sekarang kamu semakin dewasa yang dimana kamu pasti tau yang terbaik maupun yang gak buat diri kamuu, 💞</span><br>
+                </div>
+            </div>
+            <div id="clock-box">
+                <span id="clock">577 days 0 hours 0 minutes 0 seconds</span> <!-- Change to "6940 days..." if needed -->
+            </div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
     </div>
-    <header>
-        <div class="container">
-            <h1><a href="index.html">Koperasi Simpan Pinjam</a></h1>
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="profil.html">Profil</a></li>
-                <li><a href="transaksi.html">Transaksi</a></li>
-               <li><a href="login.html">Login</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <!--banner-->
-    <section class="img">
-        <h2>Angjay Koperasi</h2>
-       
-</section>
-<!--Koperasi pinjam-->
-<section class="teks">
-    <div class="tek">
-        <p>Transaksi Aman,gampang, cepat, dan terpercaya</p>
-    </div>
-</section>
+    <script>
+    (function() {
+        var canvas = $('#canvas');
+		
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
 
-<div class="box-tuturial">
-    <h1>ini adalag nama</h1>
-    <div class="box-kiri">
-        <img src="hp.jpeg" height="200px">
-        <p><h3>Daftar akun/registrasi</h3></p>
-        <p>isi formulir agar bisa melakukan pinjaman</p>
-    </div>
-</div>
+        var width = canvas.width();
+        var height = canvas.height();        
+        canvas.attr("width", width);
+        canvas.attr("height", height);
 
-<div class="box-tuturial">
-    <div class="box-tengah">
-        <img src="form.jpeg" height="200px">
-        <p><h3>isi form</h3></p>
-        <p>Masukkan jumlah yg ingin dipinjam</p>
-    </div>
-</div>
-<div class="box-tuturial">
-    <div class="box-kanan">
-        <img src="form.jpeg" height="200px">
-        <p><h3>Masukkan jumlah yang ingin dipinjam</h3></p>
-        <p>Bayar Pinjaaman sebelum jatuh tempo</p>
-    </div>
-</div>
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]] 
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
 
-<footer>
-    <p>@IqbalMaulana25
-    </p>
-</footer>
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
 
+        canvas.click(function(e) {
+            playAudio();
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0; 
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".bg-loader").hide();
-    })    
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
 
-</script>
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            canvas.parent().css("background", "url('./gambar.png')");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            $("#code").show().typewriter();
+        }));
+	    
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+            textAnimate().start();
+        }));
+
+        runAsync().start();
+    })();
+    </script>
 </body>
 </html>
